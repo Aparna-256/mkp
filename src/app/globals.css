@@ -87,3 +87,12 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
+
+input.peer:checked~div .check-circle {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input.peer:checked~div .check-circle span {
+  opacity: 1 !important;
+}

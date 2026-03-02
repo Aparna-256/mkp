@@ -110,7 +110,13 @@ export default function Summary() {
                         </div>
                         <div className="px-6 relative">
                             <div className="absolute -top-12 border-4 border-surface-light dark:border-surface-dark rounded-full overflow-hidden w-24 h-24 shadow-md bg-white">
-                                <img alt="Sarah Jenkins" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5CSqHReh4O40Qqvn6Ziq2k4dlybs75LxvnLZyNwq7p7tkheCf-_8YOlGi_ZCHR6-HCxXQF2dn1LAgO2Yt7lxGns4WAmMWEoc63tTYWOCevBI5eZuZLmnYbCvhqk97oT92O5lv-QwprfpL0vvhOZ5UwCVw0G9RzjvrnsOsLUK_QA4hhO6roOG-j1bz22qaCzqyiVC6WAGRjVsqpfadcEYpTLouGumTQKYlCDRKZOZDzDLK2Y639QxzqKOCGv9VGTd9dSRAIhe6XVC" />
+                                <Image
+                                    alt="Sarah Jenkins"
+                                    className="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5CSqHReh4O40Qqvn6Ziq2k4dlybs75LxvnLZyNwq7p7tkheCf-_8YOlGi_ZCHR6-HCxXQF2dn1LAgO2Yt7lxGns4WAmMWEoc63tTYWOCevBI5eZuZLmnYbCvhqk97oT92O5lv-QwprfpL0vvhOZ5UwCVw0G9RzjvrnsOsLUK_QA4hhO6roOG-j1bz22qaCzqyiVC6WAGRjVsqpfadcEYpTLouGumTQKYlCDRKZOZDzDLK2Y639QxzqKOCGv9VGTd9dSRAIhe6XVC"
+                                    width={48}
+                                    height={48}
+                                />
                             </div>
                             <div className="pt-14 pb-6">
                                 <div className="flex justify-between items-start">
@@ -119,7 +125,13 @@ export default function Summary() {
                                         <p className="text-sm text-primary font-medium mb-1">Senior Relocation Manager</p>
                                         <p className="text-xs text-cool-grey">MKP Elite Team • 8 Yrs Experience</p>
                                     </div>
-                                    <img alt="LinkedIn" className="w-6 h-6 opacity-60 grayscale hover:grayscale-0 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbrSATt6f1KKfhovkW-OzSx1BmApMHkIpGqVHTVfZDm58mW9MH8x8W0l3F-7vwoUSVSj6ZMKA7hFVMfBwNItJRPi3NwFmWw9iVmS5DZ-8X-lpLSpNyRGt1qbwNyDgJCRukMi6j3RbLPEGMW_N2TuarnZiXaarFFiAnzfBm06S6Ayr_yhi4j6fmN-Zlh3SY9bjoBXl3R--z31KskIXv0B-TkjioYitopAN7APdyweXUw1a9R2a7y6O5kiExiUYoNhsBlie4v0mxz2Be" />
+                                    <Image
+                                        alt="LinkedIn"
+                                        className="opacity-60 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbrSATt6f1KKfhovkW-OzSx1BmApMHkIpGqVHTVfZDm58mW9MH8x8W0l3F-7vwoUSVSj6ZMKA7hFVMfBwNItJRPi3NwFmWw9iVmS5DZ-8X-lpLSpNyRGt1qbwNyDgJCRukMi6j3RbLPEGMW_N2TuarnZiXaarFFiAnzfBm06S6Ayr_yhi4j6fmN-Zlh3SY9bjoBXl3R--z31KskIXv0B-TkjioYitopAN7APdyweXUw1a9R2a7y6O5kiExiUYoNhsBlie4v0mxz2Be"
+                                        width={24}
+                                        height={24}
+                                    />
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-cool-grey/10 space-y-3">
                                     <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">

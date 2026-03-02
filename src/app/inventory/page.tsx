@@ -35,7 +35,7 @@ export default function Inventory() {
                         </button>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 grid-flow-row-dense">
                         <label className="cursor-pointer relative group md:col-span-2">
                             <input type="checkbox" className="peer sr-only" checked={sofaCount > 0} onChange={() => { }} />
                             <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-6 flex flex-row items-center justify-between shadow-sm hover:shadow-md transition-all bento-item peer-checked:border-primary peer-checked:bg-primary/5">
@@ -161,9 +161,124 @@ export default function Inventory() {
                             </div>
                         </label>
 
+                        {/* Storage Bed */}
                         <label className="cursor-pointer relative group md:col-span-2">
                             <input type="checkbox" className="peer sr-only" />
-                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-6 flex flex-row items-center justify-between shadow-sm hover:shadow-md transition-all bento-item peer-checked:border-primary peer-checked:bg-primary/5">
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
+                                <div className="flex justify-between items-start">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
+                                        <span className="material-icons-outlined text-2xl">bed</span>
+                                    </div>
+                                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center check-circle group-hover:border-primary">
+                                        <span className="material-icons-outlined text-sm text-white opacity-0">check</span>
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="font-display font-semibold text-oxford-navy dark:text-white">Storage Bed</h3>
+                                    <p className="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-wide mt-1">King / Queen</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        {/* Wardrobe */}
+                        <label className="cursor-pointer relative group">
+                            <input type="checkbox" className="peer sr-only" />
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
+                                <div className="flex justify-between items-start">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
+                                        <span className="material-icons-outlined text-2xl">checkroom</span>
+                                    </div>
+                                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center check-circle group-hover:border-primary">
+                                        <span className="material-icons-outlined text-sm text-white opacity-0">check</span>
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="font-display font-semibold text-oxford-navy dark:text-white">Wardrobe</h3>
+                                    <p className="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-wide mt-1">Almirah</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        {/* Dining Set */}
+                        <label className="cursor-pointer relative group">
+                            <input type="checkbox" className="peer sr-only" />
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
+                                <div className="flex justify-between items-start">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
+                                        <span className="material-icons-outlined text-2xl">restaurant</span>
+                                    </div>
+                                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center check-circle group-hover:border-primary">
+                                        <span className="material-icons-outlined text-sm text-white opacity-0">check</span>
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="font-display font-semibold text-oxford-navy dark:text-white">Dining Set</h3>
+                                    <p className="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-wide mt-1">4/6 Seater</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        {/* Refrigerator */}
+                        <label className="cursor-pointer relative group">
+                            <input type="checkbox" className="peer sr-only" />
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
+                                <div className="flex justify-between items-start">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
+                                        <span className="material-icons-outlined text-2xl">kitchen</span>
+                                    </div>
+                                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center check-circle group-hover:border-primary">
+                                        <span className="material-icons-outlined text-sm text-white opacity-0">check</span>
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="font-display font-semibold text-oxford-navy dark:text-white">Refrigerator</h3>
+                                    <p className="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-wide mt-1">Single / Double Door</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        {/* Washing Machine */}
+                        <label className="cursor-pointer relative group">
+                            <input type="checkbox" className="peer sr-only" />
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
+                                <div className="flex justify-between items-start">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
+                                        <span className="material-icons-outlined text-2xl">local_laundry_service</span>
+                                    </div>
+                                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center check-circle group-hover:border-primary">
+                                        <span className="material-icons-outlined text-sm text-white opacity-0">check</span>
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="font-display font-semibold text-oxford-navy dark:text-white">Washing Machine</h3>
+                                    <p className="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-wide mt-1">Top / Front Load</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        {/* Air Conditioner */}
+                        <label className="cursor-pointer relative group">
+                            <input type="checkbox" className="peer sr-only" />
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
+                                <div className="flex justify-between items-start">
+                                    <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
+                                        <span className="material-icons-outlined text-2xl">ac_unit</span>
+                                    </div>
+                                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center check-circle group-hover:border-primary">
+                                        <span className="material-icons-outlined text-sm text-white opacity-0">check</span>
+                                    </div>
+                                </div>
+                                <div className="mt-4">
+                                    <h3 className="font-display font-semibold text-oxford-navy dark:text-white">Air Conditioner</h3>
+                                    <p className="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-wide mt-1">Window / Split</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        {/* Misc Cartons */}
+                        <label className="cursor-pointer relative group col-span-full">
+                            <input type="checkbox" className="peer sr-only" />
+                            <div className="h-full bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-gray-700 p-8 flex flex-row items-center justify-between shadow-sm hover:shadow-md transition-all bento-item min-h-[160px] peer-checked:border-primary peer-checked:bg-primary/5">
                                 <div className="flex items-center gap-5">
                                     <div className="w-14 h-14 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">
                                         <span className="material-icons-outlined text-2xl">inventory_2</span>

@@ -62,14 +62,14 @@ export default function DelhiPackersAndMovers() {
     ];
 
     return (
-        <main className="min-h-screen bg-gray-50 pb-20">
+        <main className="min-h-screen bg-primary/5 pb-20">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-12 overflow-hidden bg-gradient-to-br from-secondary via-blue-900 to-primary">
+            <section className="relative pt-24 pb-12 overflow-hidden bg-primary">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-secondary/80 mix-blend-multiply z-10"></div>
                     {/* Animated background blobs */}
                     <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/30 blur-3xl animate-pulse-slow"></div>
-                    <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-500/20 blur-3xl animate-pulse-slow" style={{ animationDelay: '1.5s' }}></div>
+                    <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl animate-pulse-slow" style={{ animationDelay: '1.5s' }}></div>
                 </div>
 
                 <div className="container mx-auto px-4 relative z-20">
@@ -78,7 +78,7 @@ export default function DelhiPackersAndMovers() {
                             Best Packers and Movers <br />
                             <span className="text-primary italic">in Delhi</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light">
+                        <p className="text-lg md:text-xl text-primary/20 mb-8 max-w-2xl font-light">
                             Top Rated House Shifting Services in Delhi with 100% Damage and Delay Protection. Any Damage. Any Delay. We Pay.
                         </p>
 
@@ -94,26 +94,26 @@ export default function DelhiPackersAndMovers() {
 
             {/* Services Grid */}
             <section className="py-12 -mt-8 relative z-30 container mx-auto px-4">
-                <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-gray-100">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                <div className="bg-secondary rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-primary/10">
+                    <h2 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
                         <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                         Relocation Services We Offer in Delhi
                     </h2>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                         {services.map((service, idx) => (
-                            <div key={idx} className="group relative bg-gray-50 rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-white hover:shadow-xl hover:shadow-primary/10 border border-transparent hover:border-gray-200 transition-all duration-300 hover:-translate-y-2">
+                            <div key={idx} className="group relative bg-primary/5 rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-secondary hover:shadow-xl hover:shadow-primary/10 border border-transparent hover:border-primary/10 transition-all duration-300 hover:-translate-y-2">
                                 <div className="absolute top-0 inset-x-0 flex justify-center -mt-3 z-10">
                                     <span className="bg-[#ffe8c3] text-[#4b4b4b] text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full border border-white shadow-sm uppercase tracking-wider">
                                         {service.discount}
                                     </span>
                                 </div>
 
-                                <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary/10">
+                                <div className="w-16 h-16 rounded-full bg-secondary shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary/10">
                                     <span className="material-icons text-3xl text-secondary group-hover:text-primary transition-colors">{service.icon}</span>
                                 </div>
 
-                                <h3 className="font-semibold text-gray-800 text-sm md:text-base group-hover:text-secondary">{service.title}</h3>
+                                <h3 className="font-semibold text-primary text-sm md:text-base group-hover:text-secondary">{service.title}</h3>
                             </div>
                         ))}
                     </div>
@@ -125,47 +125,47 @@ export default function DelhiPackersAndMovers() {
                 <div className="lg:col-span-2 space-y-8">
 
                     {/* How It Works */}
-                    <section className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                    <section className="bg-secondary rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-primary/10">
+                        <h2 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
                             <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                             How MKP Packers and Movers Works?
                         </h2>
 
-                        <div className="relative border-l-2 border-dashed border-gray-200 ml-6 pl-8 space-y-10 py-2">
+                        <div className="relative border-l-2 border-dashed border-primary/10 ml-6 pl-8 space-y-10 py-2">
                             {steps.map((step, idx) => (
                                 <div key={idx} className="relative group">
-                                    <div className="absolute -left-12 top-0.5 w-10 h-10 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-colors z-10 shadow-sm">
-                                        <span className="material-icons text-gray-500 group-hover:text-primary transition-colors text-xl">{step.icon}</span>
+                                    <div className="absolute -left-12 top-0.5 w-10 h-10 rounded-full bg-primary/5 border-2 border-primary/10 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-colors z-10 shadow-sm">
+                                        <span className="material-icons text-primary/70 group-hover:text-primary transition-colors text-xl">{step.icon}</span>
                                     </div>
-                                    <h3 className="font-bold text-lg text-gray-800 mb-2 group-hover:text-secondary transition-colors">{step.title}</h3>
-                                    <p className="text-gray-500 text-sm md:text-base leading-relaxed">{step.desc}</p>
+                                    <h3 className="font-bold text-lg text-primary mb-2 group-hover:text-secondary transition-colors">{step.title}</h3>
+                                    <p className="text-primary/70 text-sm md:text-base leading-relaxed">{step.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </section>
 
                     {/* Trust Indicators */}
-                    <section className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-gray-100">
+                    <section className="bg-secondary rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-primary/10">
                         <div className="text-center mb-8">
-                            <h2 className="text-2xl font-bold text-gray-800 mb-2">Why MKP is a Trusted Moving Company</h2>
-                            <p className="text-gray-500">Delivering excellence in relocation services across India</p>
+                            <h2 className="text-2xl font-bold text-primary mb-2">Why MKP is a Trusted Moving Company</h2>
+                            <p className="text-primary/70">Delivering excellence in relocation services across India</p>
                         </div>
 
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                             {trustIndicators.map((stat, idx) => (
-                                <div key={idx} className="bg-gray-50 rounded-xl p-4 text-center border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all">
+                                <div key={idx} className="bg-primary/5 rounded-xl p-4 text-center border border-primary/10 hover:border-primary/20 hover:shadow-md transition-all">
                                     <div className="text-lg md:text-xl font-bold text-secondary mb-1">{stat.value}</div>
-                                    <div className="text-xs md:text-sm text-gray-500">{stat.label}</div>
+                                    <div className="text-xs md:text-sm text-primary/70">{stat.label}</div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mt-8 bg-blue-50/50 rounded-xl p-5 border border-blue-100">
+                        <div className="mt-8 bg-primary/5 rounded-xl p-5 border border-primary/10">
                             <div className="flex items-center gap-3 mb-3">
                                 <span className="material-icons text-primary text-2xl">emoji_events</span>
-                                <h3 className="text-lg font-bold text-gray-800">Awards & Recognitions</h3>
+                                <h3 className="text-lg font-bold text-primary">Awards & Recognitions</h3>
                             </div>
-                            <ul className="list-disc pl-5 text-sm text-gray-600 space-y-2">
+                            <ul className="list-disc pl-5 text-sm text-primary/70 space-y-2">
                                 <li>CII Industry Transformation in Logistics & Supply Chain</li>
                                 <li>BW Supply Chain Award for Best Collaborative Supplier Partnership</li>
                             </ul>
@@ -173,19 +173,19 @@ export default function DelhiPackersAndMovers() {
                     </section>
 
                     {/* Comparison Table */}
-                    <section className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-gray-100 overflow-hidden">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                    <section className="bg-secondary rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-primary/10 overflow-hidden">
+                        <h2 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
                             <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                             MKP Vs Local Packers & Movers
                         </h2>
 
-                        <div className="overflow-x-auto rounded-xl border border-gray-200">
+                        <div className="overflow-x-auto rounded-xl border border-primary/10">
                             <table className="w-full text-left border-collapse min-w-[500px]">
                                 <thead>
-                                    <tr className="bg-gray-50 border-b border-gray-200 text-sm uppercase tracking-wider">
-                                        <th className="p-4 font-bold text-gray-500 w-1/2 border-r border-gray-200">Services</th>
-                                        <th className="p-4 font-bold text-gray-500 w-1/4 text-center border-r border-gray-200">Local Movers</th>
-                                        <th className="p-4 font-bold text-secondary w-1/4 text-center bg-blue-50">MKP</th>
+                                    <tr className="bg-primary/5 border-b border-primary/10 text-sm uppercase tracking-wider">
+                                        <th className="p-4 font-bold text-primary/70 w-1/2 border-r border-primary/10">Services</th>
+                                        <th className="p-4 font-bold text-primary/70 w-1/4 text-center border-r border-primary/10">Local Movers</th>
+                                        <th className="p-4 font-bold text-secondary w-1/4 text-center bg-primary">MKP</th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-sm">
@@ -197,12 +197,12 @@ export default function DelhiPackersAndMovers() {
                                         "Dismantling & Re-Assemble Of Cot",
                                         "Damage Assurance"
                                     ].map((feature, idx) => (
-                                        <tr key={idx} className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                                            <td className="p-4 font-medium text-gray-700 border-r border-gray-200">{feature}</td>
-                                            <td className="p-4 text-center border-r border-gray-200">
-                                                <span className="material-icons text-gray-300">close</span>
+                                        <tr key={idx} className="border-b border-primary/10 hover:bg-primary/5 transition-colors">
+                                            <td className="p-4 font-medium text-primary/70 border-r border-primary/10">{feature}</td>
+                                            <td className="p-4 text-center border-r border-primary/10">
+                                                <span className="material-icons text-primary/40">close</span>
                                             </td>
-                                            <td className="p-4 text-center bg-blue-50/50">
+                                            <td className="p-4 text-center bg-primary/5">
                                                 <span className="material-icons text-green-500">check_circle</span>
                                             </td>
                                         </tr>
@@ -213,8 +213,8 @@ export default function DelhiPackersAndMovers() {
                     </section>
 
                     {/* Household Items & Preparation Guide */}
-                    <section className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-gray-100 mt-8">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                    <section className="bg-secondary rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-primary/10 mt-8">
+                        <h2 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
                             <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                             Household Items & Preparation Guide
                         </h2>
@@ -225,7 +225,7 @@ export default function DelhiPackersAndMovers() {
                                     <span className="material-icons">living</span>
                                     Living Room Essentials
                                 </h3>
-                                <ul className="space-y-3 text-gray-600 list-disc ml-6">
+                                <ul className="space-y-3 text-primary/70 list-disc ml-6">
                                     <li><strong>Sofa Sets:</strong> Usually a 3-seater with two 1-seater chairs, or an L-shaped sectional for modern apartments.</li>
                                     <li><strong>Center/Coffee Table:</strong> Often paired with smaller side tables for serving tea and snacks to guests.</li>
                                     <li><strong>TV Unit/Console:</strong> A focal point that often includes storage for media players and decorative items.</li>
@@ -239,7 +239,7 @@ export default function DelhiPackersAndMovers() {
                                     <span className="material-icons">bed</span>
                                     Bedroom & Storage
                                 </h3>
-                                <ul className="space-y-3 text-gray-600 list-disc ml-6">
+                                <ul className="space-y-3 text-primary/70 list-disc ml-6">
                                     <li><strong>Storage Beds:</strong> King or Queen-sized beds with hydraulic or manual storage underneath are standard to maximize space.</li>
                                     <li><strong>Wardrobes (Almirahs):</strong> Many homes still prefer steel Godrej-style almirahs or large wooden wardrobes.</li>
                                     <li><strong>Dressing Table:</strong> A dedicated unit with a mirror and drawers for cosmetics and grooming.</li>
@@ -252,7 +252,7 @@ export default function DelhiPackersAndMovers() {
                                     <span className="material-icons">restaurant</span>
                                     Dining & Utility
                                 </h3>
-                                <ul className="space-y-3 text-gray-600 list-disc ml-6">
+                                <ul className="space-y-3 text-primary/70 list-disc ml-6">
                                     <li><strong>Dining Set:</strong> Usually a 4 or 6-seater wooden table.</li>
                                     <li><strong>Study Table & Chair:</strong> Essential for students or those working from home.</li>
                                 </ul>
@@ -263,29 +263,29 @@ export default function DelhiPackersAndMovers() {
                                     <span className="material-icons">kitchen</span>
                                     Relocating Big Items (White Goods)
                                 </h3>
-                                <p className="text-gray-600 mb-4">Relocating large appliances requires specific preparation to prevent mechanical failure during transit.</p>
+                                <p className="text-primary/70 mb-4">Relocating large appliances requires specific preparation to prevent mechanical failure during transit.</p>
                                 <div className="space-y-4">
-                                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                        <h4 className="font-bold text-gray-800 mb-2">1. Refrigerator</h4>
-                                        <p className="text-sm text-gray-600 mb-1"><strong>Preparation:</strong> Empty it completely and defrost the freezer at least 24 hours before moving.</p>
-                                        <p className="text-sm text-gray-600 mb-1"><strong>Moving Tip:</strong> Always transport it upright. Laying a fridge on its side can cause compressor oil to flow into the cooling lines, potentially ruining the appliance.</p>
-                                        <p className="text-sm text-gray-600"><strong>Setup:</strong> Once placed in the new home, let it stand for 4–6 hours before plugging it in to allow the fluids to settle.</p>
+                                    <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
+                                        <h4 className="font-bold text-primary mb-2">1. Refrigerator</h4>
+                                        <p className="text-sm text-primary/70 mb-1"><strong>Preparation:</strong> Empty it completely and defrost the freezer at least 24 hours before moving.</p>
+                                        <p className="text-sm text-primary/70 mb-1"><strong>Moving Tip:</strong> Always transport it upright. Laying a fridge on its side can cause compressor oil to flow into the cooling lines, potentially ruining the appliance.</p>
+                                        <p className="text-sm text-primary/70"><strong>Setup:</strong> Once placed in the new home, let it stand for 4–6 hours before plugging it in to allow the fluids to settle.</p>
                                     </div>
-                                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                        <h4 className="font-bold text-gray-800 mb-2">2. Washing Machine</h4>
-                                        <p className="text-sm text-gray-600 mb-1"><strong>Preparation:</strong> Drain all remaining water from the hoses and the internal pump.</p>
-                                        <p className="text-sm text-gray-600 mb-1"><strong>Critical Step:</strong> Use shipping bolts (transit bolts) to secure the drum. Without these, the drum can bounce during the move and damage the suspension system.</p>
-                                        <p className="text-sm text-gray-600"><strong>Moving Tip:</strong> Keep the drain pipe secured to the back of the machine so it doesn't drag.</p>
+                                    <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
+                                        <h4 className="font-bold text-primary mb-2">2. Washing Machine</h4>
+                                        <p className="text-sm text-primary/70 mb-1"><strong>Preparation:</strong> Drain all remaining water from the hoses and the internal pump.</p>
+                                        <p className="text-sm text-primary/70 mb-1"><strong>Critical Step:</strong> Use shipping bolts (transit bolts) to secure the drum. Without these, the drum can bounce during the move and damage the suspension system.</p>
+                                        <p className="text-sm text-primary/70"><strong>Moving Tip:</strong> Keep the drain pipe secured to the back of the machine so it doesn't drag.</p>
                                     </div>
-                                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                        <h4 className="font-bold text-gray-800 mb-2">3. Air Conditioner (AC)</h4>
-                                        <p className="text-sm text-gray-600 mb-1"><strong>Preparation:</strong> Requires professional &quot;pump-down&quot; and disconnection to ensure the refrigerant gas is saved within the outdoor unit.</p>
-                                        <p className="text-sm text-gray-600"><strong>Moving Tip:</strong> Copper pipes are fragile; ensure they are coiled carefully and not kinked.</p>
+                                    <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
+                                        <h4 className="font-bold text-primary mb-2">3. Air Conditioner (AC)</h4>
+                                        <p className="text-sm text-primary/70 mb-1"><strong>Preparation:</strong> Requires professional &quot;pump-down&quot; and disconnection to ensure the refrigerant gas is saved within the outdoor unit.</p>
+                                        <p className="text-sm text-primary/70"><strong>Moving Tip:</strong> Copper pipes are fragile; ensure they are coiled carefully and not kinked.</p>
                                     </div>
-                                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                        <h4 className="font-bold text-gray-800 mb-2">4. Kitchen Appliances (Microwave &amp; Water Purifiers)</h4>
-                                        <p className="text-sm text-gray-600 mb-1"><strong>Microwave:</strong> Remove the glass turntable and pack it separately in bubble wrap.</p>
-                                        <p className="text-sm text-gray-600"><strong>Water Purifier (RO):</strong> Drain the storage tank completely. It&apos;s often best to call a technician to uninstall and reinstall it to avoid internal filter damage.</p>
+                                    <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
+                                        <h4 className="font-bold text-primary mb-2">4. Kitchen Appliances (Microwave &amp; Water Purifiers)</h4>
+                                        <p className="text-sm text-primary/70 mb-1"><strong>Microwave:</strong> Remove the glass turntable and pack it separately in bubble wrap.</p>
+                                        <p className="text-sm text-primary/70"><strong>Water Purifier (RO):</strong> Drain the storage tank completely. It&apos;s often best to call a technician to uninstall and reinstall it to avoid internal filter damage.</p>
                                     </div>
                                 </div>
                             </div>
@@ -298,8 +298,8 @@ export default function DelhiPackersAndMovers() {
                 <div className="space-y-8">
 
                     {/* Why Choose Us */}
-                    <section className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                    <section className="bg-secondary rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-8 border border-primary/10">
+                        <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
                             <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                             Why Choose Us?
                         </h2>
@@ -307,12 +307,12 @@ export default function DelhiPackersAndMovers() {
                         <div className="space-y-6">
                             {features.map((feature, idx) => (
                                 <div key={idx} className="flex gap-4 group">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                                         <span className="material-icons text-secondary group-hover:text-primary text-xl transition-colors">{feature.icon}</span>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-gray-800 text-sm mb-1 group-hover:text-secondary">{feature.title}</h3>
-                                        <p className="text-xs text-gray-500 leading-relaxed">{feature.desc}</p>
+                                        <h3 className="font-bold text-primary text-sm mb-1 group-hover:text-secondary">{feature.title}</h3>
+                                        <p className="text-xs text-primary/70 leading-relaxed">{feature.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -323,14 +323,14 @@ export default function DelhiPackersAndMovers() {
             </div>
 
             {/* Testimonials */}
-            <section className="py-12 bg-white border-y border-gray-100 overflow-hidden relative">
+            <section className="py-12 bg-secondary border-y border-primary/10 overflow-hidden relative">
                 <div className="container mx-auto px-4 mb-8 flex justify-between items-end">
                     <div>
-                        <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2 mb-2">
+                        <h2 className="text-2xl font-bold text-primary flex items-center gap-2 mb-2">
                             <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                             Customer Reviews
                         </h2>
-                        <p className="text-gray-500 text-sm">(4.8/5 Rating from 8.9 Lakh+ Reviews)</p>
+                        <p className="text-primary/70 text-sm">(4.8/5 Rating from 8.9 Lakh+ Reviews)</p>
                     </div>
                     <button className="text-primary font-semibold text-sm hover:underline hidden sm:block">See All Reviews &rarr;</button>
                 </div>
@@ -339,20 +339,20 @@ export default function DelhiPackersAndMovers() {
                 <div className="container mx-auto px-4">
                     <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory pt-2 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
                         {reviews.map((review, idx) => (
-                            <div key={idx} className="flex-none w-[300px] bg-white rounded-xl shadow-md border border-gray-100 p-6 snap-center hover:shadow-xl hover:-translate-y-1 transition-all">
+                            <div key={idx} className="flex-none w-[300px] bg-secondary rounded-xl shadow-md border border-primary/10 p-6 snap-center hover:shadow-xl hover:-translate-y-1 transition-all">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-yellow-600 text-white font-bold flex items-center justify-center text-lg shadow-inner">
                                         {review.name.charAt(0).toUpperCase()}
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-800 text-sm">{review.name}</h4>
+                                        <h4 className="font-bold text-primary text-sm">{review.name}</h4>
                                         <div className="flex text-primary text-xs">
                                             {[...Array(5)].map((_, i) => <span key={i} className="material-icons" style={{ fontSize: '14px' }}>star</span>)}
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-gray-600 text-sm italic line-clamp-4 leading-relaxed tracking-wide relative">
-                                    <span className="absolute -top-3 -left-2 text-3xl text-gray-200 material-icons font-serif" style={{ zIndex: -1 }}>format_quote</span>
+                                <p className="text-primary/70 text-sm italic line-clamp-4 leading-relaxed tracking-wide relative">
+                                    <span className="absolute -top-3 -left-2 text-3xl text-primary/20 material-icons font-serif" style={{ zIndex: -1 }}>format_quote</span>
                                     {review.text}
                                 </p>
                             </div>
@@ -364,29 +364,29 @@ export default function DelhiPackersAndMovers() {
             {/* FAQs */}
             <section className="py-16 container mx-auto px-4">
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Frequently Asked Questions</h2>
+                    <h2 className="text-2xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>
 
                     <div className="space-y-4">
                         {faqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className={`bg-white border rounded-xl overflow-hidden transition-all duration-300 ${activeFaq === idx ? 'border-primary/50 shadow-md ring-1 ring-primary/10' : 'border-gray-200 hover:border-gray-300 shadow-sm'}`}
+                                className={`bg-secondary border rounded-xl overflow-hidden transition-all duration-300 ${activeFaq === idx ? 'border-primary/50 shadow-md ring-1 ring-primary/10' : 'border-primary/10 hover:border-primary/20 shadow-sm'}`}
                             >
                                 <button
                                     onClick={() => toggleFaq(idx)}
                                     className="w-full text-left px-6 py-4 flex items-center justify-between focus:outline-none"
                                 >
-                                    <span className={`font-semibold text-sm md:text-base pr-8 ${activeFaq === idx ? 'text-secondary' : 'text-gray-700'}`}>
+                                    <span className={`font-semibold text-sm md:text-base pr-8 ${activeFaq === idx ? 'text-secondary' : 'text-primary/70'}`}>
                                         {idx + 1}. {faq.q}
                                     </span>
-                                    <span className={`material-icons flex-shrink-0 transition-transform duration-300 ${activeFaq === idx ? 'rotate-180 text-primary' : 'text-gray-400'}`}>
+                                    <span className={`material-icons flex-shrink-0 transition-transform duration-300 ${activeFaq === idx ? 'rotate-180 text-primary' : 'text-primary/40'}`}>
                                         expand_more
                                     </span>
                                 </button>
                                 <div
                                     className={`px-6 overflow-hidden transition-all duration-500 ease-in-out ${activeFaq === idx ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}
                                 >
-                                    <p className="text-gray-500 text-sm md:text-base leading-relaxed border-t border-gray-100 pt-4">
+                                    <p className="text-primary/70 text-sm md:text-base leading-relaxed border-t border-primary/10 pt-4">
                                         {faq.a}
                                     </p>
                                 </div>

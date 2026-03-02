@@ -12,12 +12,16 @@ type InventoryItem = {
     hasQuantityOptions: boolean;
 };
 
+type CustomItem = InventoryItem & { isCustom: boolean };
+
 const inventoryItems: InventoryItem[] = [
     { id: "sofa", name: "Sofa Set (3 Seater)", description: "Includes cushions and upholstery protection", icon: "chair", price: 2500, hasQuantityOptions: true },
     { id: "coffeeTable", name: "Coffee Table", description: "Glass / Wood", icon: "table_restaurant", price: 500, hasQuantityOptions: false },
+    { id: "studyTable", name: "Study / Office Table", description: "Standard wooden or metal desk", icon: "desk", price: 800, hasQuantityOptions: true },
     { id: "tvUnit", name: "TV Unit", description: "Medium Size", icon: "tv", price: 800, hasQuantityOptions: false },
     { id: "bookshelf", name: "Bookshelf", description: "Standard wooden bookshelf. Please empty contents before packing.", icon: "menu_book", price: 725, hasQuantityOptions: true },
     { id: "recliner", name: "Recliner", description: "Single Seater", icon: "weekend", price: 1200, hasQuantityOptions: false },
+    { id: "officeChair", name: "Wooden / Office Chair", description: "Standard non-upholstered or office chair", icon: "chair_alt", price: 400, hasQuantityOptions: true },
     { id: "floorLamp", name: "Floor Lamp", description: "Fragile", icon: "light", price: 300, hasQuantityOptions: false },
     { id: "storageBed", name: "Storage Bed", description: "King / Queen", icon: "bed", price: 3500, hasQuantityOptions: false },
     { id: "wardrobe", name: "Wardrobe", description: "Almirah", icon: "checkroom", price: 2000, hasQuantityOptions: false },
@@ -34,6 +38,36 @@ export default function Inventory() {
         sofa: 1,
         bookshelf: 2,
     });
+
+    // Custom Items State
+    const [customItems, setCustomItems] = useState<CustomItem[]>([]);
+    const [isCustomMenuOpen, setIsCustomMenuOpen] = useState(false);
+    const [customItemName, setCustomItemName] = useState("");
+
+    const allItems = [...inventoryItems, ...customItems];
+
+    const handleAddCustomItem = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!customItemName.trim()) return;
+
+        const newItemId = `custom_${Date.now()}`;
+        const newCustomItem: CustomItem = {
+            id: newItemId,
+            name: customItemName,
+            description: "Custom Item",
+            icon: "category", // Generic icon
+            price: 500, // Default price for custom items, could be made editable
+            hasQuantityOptions: true,
+            isCustom: true
+        };
+
+        setCustomItems(prev => [...prev, newCustomItem]);
+        // Auto-select the newly added custom item with quantity 1
+        setSelectedQuantities(prev => ({ ...prev, [newItemId]: 1 }));
+
+        setCustomItemName("");
+        setIsCustomMenuOpen(false);
+    };
 
     const toggleItem = (itemId: string, hasQuantityOptions: boolean) => {
         setSelectedQuantities(prev => {
@@ -72,7 +106,7 @@ export default function Inventory() {
     let totalItemsSelected = 0;
 
     Object.entries(selectedQuantities).forEach(([itemId, qty]) => {
-        const item = inventoryItems.find(i => i.id === itemId);
+        const item = allItems.find(i => i.id === itemId);
         if (item) {
             inventoryPrice += item.price * qty;
             totalItemsSelected += qty;
@@ -109,7 +143,7 @@ export default function Inventory() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 grid-flow-row-dense">
-                            {inventoryItems.map((item) => {
+                            {allItems.map((item) => {
                                 const isSelected = (selectedQuantities[item.id] || 0) > 0;
                                 const qty = selectedQuantities[item.id] || 0;
 
@@ -181,7 +215,10 @@ export default function Inventory() {
                         </div>
 
                         <div className="mt-8 flex justify-center">
-                            <button className="flex items-center gap-2 text-primary font-medium hover:underline text-sm uppercase tracking-widest cursor-pointer">
+                            <button
+                                onClick={() => setIsCustomMenuOpen(true)}
+                                className="flex items-center gap-2 text-primary font-medium hover:underline text-sm uppercase tracking-widest cursor-pointer"
+                            >
                                 <span className="material-icons-outlined text-lg">add_circle_outline</span>
                                 Can't find an item? Add Custom Item
                             </button>
@@ -244,6 +281,60 @@ export default function Inventory() {
                     </div>
                 </div>
             </div>
+
+            {/* Custom Item Modal */}
+            {isCustomMenuOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm">
+                    <div className="bg-white dark:bg-primary border border-secondary/20 rounded-2xl w-full max-w-md overflow-hidden shadow-2xl animate-fade-in">
+                        <div className="px-6 py-4 border-b border-secondary/10 flex items-center justify-between">
+                            <h3 className="font-display font-bold text-xl text-primary dark:text-secondary">Add Custom Item</h3>
+                            <button
+                                onClick={() => setIsCustomMenuOpen(false)}
+                                className="text-primary/60 dark:text-secondary/60 hover:text-primary dark:hover:text-secondary transition-colors"
+                            >
+                                <span className="material-icons-outlined">close</span>
+                            </button>
+                        </div>
+                        <div className="p-6">
+                            <form onSubmit={handleAddCustomItem}>
+                                <div className="mb-4">
+                                    <label htmlFor="customItemName" className="block text-sm font-medium text-primary dark:text-secondary/80 mb-2">
+                                        Item Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="customItemName"
+                                        value={customItemName}
+                                        onChange={(e) => setCustomItemName(e.target.value)}
+                                        className="w-full px-4 py-3 bg-primary/5 dark:bg-black/20 border border-primary/20 dark:border-secondary/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary text-primary dark:text-white"
+                                        placeholder="e.g. Grand Piano, Safe, Pool Table..."
+                                        autoFocus
+                                    />
+                                    <p className="text-xs text-primary/60 dark:text-secondary/60 mt-2">
+                                        Added items will use an estimated default volume. A surveyor will confirm exact pricing later.
+                                    </p>
+                                </div>
+                                <div className="flex gap-3 justify-end mt-8">
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsCustomMenuOpen(false)}
+                                        className="px-5 py-2.5 text-sm font-bold text-primary dark:text-secondary hover:bg-primary/5 dark:hover:bg-white/5 rounded-xl transition-colors cursor-pointer"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        disabled={!customItemName.trim()}
+                                        className="px-6 py-2.5 text-sm font-bold bg-primary dark:bg-secondary text-white dark:text-primary rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer"
+                                    >
+                                        Add Item
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }

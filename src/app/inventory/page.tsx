@@ -116,7 +116,7 @@ export default function Inventory() {
     const totalEstimate = basePrice + inventoryPrice;
 
     return (
-        <main className="flex-grow bg-[#faecc3] min-h-screen">
+        <main className="flex-grow bg-background-light min-h-screen">
             <div className="w-full">
                 <div className="px-4 md:px-12 py-12">
                     <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 text-center">Smart Inventory Grid</h1>
